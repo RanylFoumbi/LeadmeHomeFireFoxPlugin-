@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div id="content" class="container">
+        <div class="my-3 content">
+            <div class="header">
+                <figure class="header__logo">
+                    <img src="/images/plg_logo.png" alt="Leadmehome">
+                </figure>
+                <h4 class="course__link">Learn how to <a href="https://support.leadmehome.io/i-suck-at-cold_emailing/" target="_blank"> SEND COLD EMAIL THAT WORK</a></h4>
+            </div>
+
+            <div id="main__content">
+
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a data-toggle="tab" href="#menu1">Emails Search</a></li>
+                    <li><a data-toggle="tab" href="#menu2">Email Finder</a></li>
+                    <li><a data-toggle="tab" href="#menu3">Bulk Search</a></li>
+                    <li><a data-toggle="tab" href="#menu4">Lead Finder</a></li>
+                </ul>
+
+                <div id="tab-content" class="tab-content">
+                    <!--Emails Search-->
+                    <div id="menu1" class=" tab-pane fade in active">
+                        <h4 class="">Paying for Email Addresses in 2019 SUCKS</h4>
+                        <p>Thank Goodness LeadmeHome Finds the email addresses of my prospects for FREE… without having to count any requests or credits or pay for csv imports.</p>
+                        
+                        <div class="emails__search__form">
+                            <input class="form-control" placeholder="medievaltimes.com" type="text" name="url" id="url__field" required>
+                            <button class="btn" id="search__btn">Emails Addresses</button>
+                        </div>
+                        <!-- <div class="nbrOfRslts">
+                            <b id="NbrEmail"></b> <span>Emails Found!</span>
+                        </div> -->
+                        
+                        <div class="copied text-center"><span>Copied to the clipboard</span></div>
+
+                        <!--Result Content-->
+                        <div id="results" class="results">
+                        
+                        
+                        </div>
+            
+                        <!--Show More button-->
+                        <div class="showmore">
+                            <button id="showmore" class="btn">Show More</button>
+                        </div>
+                    </div>
+
+                    <!--Email Finder Section-->
+                    <div id="menu2" class="tab-pane fade">
+                        <h4 class="section__title">Email Finder</h4>
+                        <div class="inputs">
+                            <input type="text" name="nameToFind" placeholder="John Doe" class="form-control finder__name" />
+                            <h5>@</h5>
+                            <input type="text" name="domainToFind" placeholder="company.com" class="form-control finder__domain" />
+                            <button class="btn finder__btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <span class="small_text">Enter a full name and the domain name of the email address (for example "itkamer.com").</span>
+
+                        <!--Result Content-->
+                        <div id="finder__results" class="email__finder">
+                            <p class="email"><i class="fas fa-check-circle"></i> name@network.com</p>
+                            <p class="email"><i class="fas fa-check-circle"></i> name@network.com</p>
+                            <p class="email"><i class="fas fa-check-circle"></i> name@network.com</p>
+                        </div>
+                    </div>
+
+                    <!--Bulk Search Section-->
+                    <div id="menu3" class="tab-pane fade">
+                        <div class="bulk__search">
+                            <h4 class="bulk__section__title">Drag and Drop or Click to Import your CSV File</h4>
+                            <input type="file" class="bulk__search__csv" accept=".csv, text/csv" name="csv__file" id="csv__file">
+                            <button class="btn bulk__search__btn">Search</button>
+                        </div>
+                    </div>
+
+                    <!--Lead Finder Section-->
+                    <div id="menu4" class="tab-pane fade">
+                      <h4 class="section__title">Comming Soon !</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--Emails Search -->
+    <script src="app/View/emailSearchView.js"></script>
+    <script src="app/Octopus/searchEmailController.js"></script>
+    
+</body>
+</html>

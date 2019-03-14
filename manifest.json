@@ -1,0 +1,48 @@
+
+{
+
+    "manifest_version": 2,
+    "name": "LeadMeHome",
+    "version": "1.0",
+    "description": "firefox scraping plugin",
+  
+    
+    "icons": {
+      "16": "images/icon.png",
+      "32": "images/icon.png",
+      "48": "images/icon.png",
+      "96": "images/icon.png",
+      "128":"images/icon.png"
+  },
+
+  "content_security_policy":
+    "script-src 'self' https://ajax.googleapis.com https://stackpath.bootstrapcdn.com https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com https://leadmehome.io; object-src 'self'",
+
+    "page_action": {
+      "default_icon": "images/icon.png",
+      "default_popup": "home.html",
+      "browser_style": true
+     },
+
+    "background": {
+        "scripts": ["script/background.js"]
+    },
+    
+    
+    "permissions": [
+        "storage",
+        "cookies",
+        "webNavigation",
+        "downloads",
+        "tabs",
+        "activeTab",
+        "webNavigation",
+        "webRequest",
+        "search",
+        "notifications",
+        "nativeMessaging",
+        "*://*.leadmehome.io/*"
+    ]
+   
+  
+  }

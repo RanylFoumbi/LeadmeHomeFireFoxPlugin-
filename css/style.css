@@ -1,0 +1,338 @@
+html{
+    font-size: 9px;
+}
+
+#content{
+    width: 80rem;
+    height: 40rem;
+    padding: 2rem;
+}
+
+.header .header__logo img{
+    width: 16rem;
+}
+
+.header .header__logo {
+    text-align: left;
+}
+
+.header{
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: auto;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.header .course__link{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.header .course__link a {
+    font-size: 2rem;
+    color: #5e06d2;
+}
+
+.links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.links ul li{
+    display: block;
+    font-size: 1.8rem;
+    text-align: left;
+}
+.links ul li:not(:last-child){
+    margin-bottom: 2rem;
+}
+
+#main__content{
+    padding-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: auto;
+    grid-column-gap: 3rem;
+    justify-content: start;
+    align-items: flex-start;
+    border-top: solid 1px #dddddd;
+}
+
+#tab-content{
+    margin-top: -.8rem;
+}
+
+.nav-pills .active a{
+    background-color: #5e06d2 !important;
+    border-radius: 0 !important;
+    font-weight: 600;
+    color: white !important;
+}
+.nav-pills .active a:hover{
+    background-color: #5e06d2 !important;
+    color: white !important;
+}
+
+.nav-pills a{
+    margin-top: .5rem !important;
+    font-weight: 500;
+    color: black !important;
+    font-size: 1.7rem;
+    border-radius: 0 !important;
+    background-color: rgba(94, 6, 210, 0.06)
+}
+
+.nav-pills a:hover{
+    background-color: rgba(94, 6, 210, .1) !important;
+}
+
+.btn, .btn:active, .btn:focus{
+    background-color: #5e06d2;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+.btn:hover{
+    background-color: rgba(94, 6, 210, .9) !important;
+    color: white !important;
+}
+
+
+/**Email Search**/
+
+#menu1 {
+    width: 93%;
+}
+
+#menu1 p{
+    font-size: 1.4rem;
+}
+
+.emails__search__form{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+#url__field, #search__btn{
+    height: 4rem !important;
+}
+
+#url__field{
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+#search__btn{
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.nbrOfRslts{
+    margin-top: 15px;
+    margin-left: 40%;
+    display: flex;
+}
+
+#results{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    padding-left: 0;
+    border-radius: 4px;
+    max-height: 22rem;
+    overflow-y: scroll;
+}
+
+.single__result{
+    padding: .8rem 1.5rem;
+    border: solid 1px #dddddd;
+
+}
+
+.single__result__header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.single__result:not(:last-child){
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+#menu1 .email__result{
+    margin-right: auto;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+#menu1 .sources{
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: right;
+    width: 20%;
+    margin:  0 !important;
+}
+
+.sources i{
+    font-size: 1.2rem !important;
+}
+
+.sources_list{
+    width: 100%;
+}
+
+.sources_list a{
+    font-size: 1.4rem;
+    color: #3ea2ee;
+    word-wrap: break-word;
+    display: block;
+}
+
+#showmore{
+    background-color: white;
+    color: black;
+    border: solid 2px black;
+    display: none;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#showmore:hover{
+    background-color: #eee !important;
+    color: black !important;
+}
+
+.loader{
+    text-align: center;
+}
+
+.url__error{
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: red;
+    text-align: center;
+}
+
+/**Email Finder**/
+#menu2 {
+    width: 93%;
+}
+
+#menu2 .inputs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.inputs h5{
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#menu2 .finder__name, #menu2 .finder__domain{
+    height: 4rem;
+}
+
+#menu2 .small_text{
+    font-size: 1.3rem;
+    display: block;
+    margin-top: 1.5rem;
+}
+#menu2 .finder__btn{
+    height: 4rem;
+    margin-left: 1rem;
+}
+
+.email__finder .email{
+    font-size: 1.6rem;
+    border: solid 1px #dddddd;
+    padding: 1rem;
+}
+
+.email__finder .email:not(:last-child){
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+.email__finder .email i{
+    color: green;
+}
+
+#finder__results{
+    margin-top: .8rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    padding-left: 0;
+    border-radius: 4px;
+    max-height: 22rem;
+    overflow-y: scroll;
+}
+
+/**Bulk Search **/
+
+#menu3 {
+    width: 93%;
+}
+
+#menu3 .bulk__section__title{
+    text-align: center;
+    font-size: 2.4rem;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 3.2rem;
+}
+
+#menu3 .bulk__search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu3 .bulk__search__csv{
+    margin-top: 1.5rem;
+    background-color: rgba(94, 6, 210, .2);
+    padding: 1.5rem 2rem;
+    border-radius: 4px;
+}
+
+#menu3 .bulk__search__btn{
+    margin-top: 2rem;
+    font-size: 2rem !important;
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+}
+
+#menu3 .bulk__search__csv::-webkit-file-upload-button {
+    border: none;
+    outline: none;
+    border: solid 1px #cccccc;
+    font-size: 1.7rem;
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+/* clipboard */
+
+.copied{
+    color: #555555;
+    transition: all .2s;
+    transform: translateY(10px);
+    height: 1.3rem;
+ }
+    
+.copied span{
+    visibility: hidden;
+    font-size: 1.3rem;
+ }
