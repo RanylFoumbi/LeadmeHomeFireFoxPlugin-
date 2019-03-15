@@ -5,9 +5,16 @@ const showMoreBtn = document.getElementById("showmore");
 const DivResult = document.getElementById('results');
 var searchField = document.getElementById('url__field');
 var P = 0;
+var EmailsAndSource = [];
 
 
 var SearchEmailControler ={
+
+  AddListnerExportBtn :function(){
+    document.querySelector(`.emails__export`).addEventListener("click",function(){
+      exportCtrl.generateCSVFile(EmailsAndSource)
+    });
+  },
 
     /* click on Email and copy it */
     getEmailTextOnClick: function (e) {
@@ -35,16 +42,30 @@ var SearchEmailControler ={
           try {
               emailSearchView.Spinner();
               const request = await axios.post(url,{url: domain,p: p})
-              const emailsAndSource = await request.data.data[0];
-               P = await request.data.data[1];
+             var emailsAndSource =  await request.data.data[0];               
+              P = await request.data.data[1];
               const cansearch = await request.data.data[2];
               /* we call the view to display request results */
               emailSearchView.removeSpinner()
               emailSearchView.displayEmails(emailsAndSource,p,cansearch);
               SearchEmailControler.addListnerOnEmail();
+            
+
+              for(var item=0; item < emailsAndSource.length; item++){
+                 EmailsAndSource.push(emailsAndSource[item]);
+              }
+
+             /* if emailsAndSource array is not empty displayExportBtn else hide it */
+            if(EmailsAndSource.length != 0){
+              emailSearchView.displayExportBtn(EmailsAndSource.length);
+              SearchEmailControler.AddListnerExportBtn();
+            }else{
+              emailSearchView.hideExportBtn();
+            }
+
           } 
           catch (error) {
-            emailSearchView.displayUrlErrorMessage(error); 
+            console.log(error); 
             emailSearchView.removeSpinner()
           }
     
@@ -98,9 +119,9 @@ var SearchEmailControler ={
 
 
 searchBtn.addEventListener("click", function(){
-DivResult.innerHTML = "";
-var domain = document.getElementById("url__field").value;
-SearchEmailControler.verifyUrl(domain);
+  DivResult.innerHTML = "";
+  var domain = document.getElementById("url__field").value;
+  SearchEmailControler.verifyUrl(domain);
 
 });
 
@@ -116,7 +137,9 @@ input.addEventListener("keyup", function(event) {
 showMoreBtn.addEventListener("click", function() {
     var domain = document.getElementById("url__field").value;
     SearchEmailControler.getEmail(url,domain,P);
+
 });
+
 
 
 /* call the current browser tab value*/

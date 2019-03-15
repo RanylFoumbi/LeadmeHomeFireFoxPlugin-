@@ -6,6 +6,14 @@ emailSearchView = {
    // NbrEmail :  document.getElementById('NbrEmail'),
     searchBtn : document.getElementById('search__btn'),
 
+    // Hide download Button
+    hideExportBtn:function () {
+    const exportBtn = document.querySelector(`.emails__export`);
+        if (exportBtn) {
+            exportBtn.parentElement.removeChild(exportBtn);
+        }
+    },
+
     // This function display result. It takes emails, p and isshowmore boolean
     displayEmails: function(emails, p, canSearch) {
         var html = "";
@@ -41,7 +49,7 @@ emailSearchView = {
                         </div>`;
             });
         }else{
-            html += `<div class="single__result">
+            html += `<div class="alert alert-warning" role="alert">
                         <h5>No Email</h5>
                     </div>`;
         }
@@ -56,7 +64,7 @@ emailSearchView = {
 
     // this function display Error when url is invalid
     displayUrlErrorMessage: function(msg){
-        this.DivResult.innerHTML = '<h5 class="url__error">'+msg+'</h5>';
+        this.DivResult.innerHTML = '<div class="alert alert-success" role="alert"><h5 class="url__error">'+msg+'</h5></div>';
     },
 
     Spinner: function () {
@@ -70,6 +78,12 @@ emailSearchView = {
             spinner.parentElement.removeChild(spinner);
             this.searchBtn.innerHTML = "Emails Addresses";
          }
+     },
+
+      // show export button
+      displayExportBtn: function(n) {
+        const buttonBox = document.querySelector(`.export`);
+        buttonBox.innerHTML = `<a id="export__btn" class="btn emails__export" href="#">Export <span>${n}</span></a>`;
      }
 
 }

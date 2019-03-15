@@ -203,6 +203,10 @@ html{
     margin-bottom: 1.5rem;
 }
 
+.showmore{
+    display: flex;
+} 
+
 #showmore:hover{
     background-color: #eee !important;
     color: black !important;
@@ -215,7 +219,6 @@ html{
 .url__error{
     font-weight: 500;
     font-size: 1.8rem;
-    color: red;
     text-align: center;
 }
 
@@ -336,3 +339,32 @@ html{
     visibility: hidden;
     font-size: 1.3rem;
  }
+
+ /* Export */
+
+ #export__btn, #export__btn:link, #export__btn:focus{
+    background-color: white;
+    color: #e65100;
+    border: solid 2px #e65100;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 16rem !important;
+    transition: .2s;
+    }
+    #export__btn:hover{
+    background-color: white !important;
+    color: #e65100 !important;
+    }
+
+    .export{
+        margin-left: auto;
+    }
+    
+    #export__btn span {
+    padding: .4rem .6rem;
+    color: white !important;
+    background-color: #e65100;
+    border-radius: 50%;
+    font-size: 1.1rem !important;
+    text-align: center;
+    }
